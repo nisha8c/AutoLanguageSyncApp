@@ -387,15 +387,20 @@ id	key	language	text	manuallyEdited	createdAt	updatedAt
 
 Use the filter bar at the top of Prisma Studio to locate the exact key you want to update:
 
+```bash
+
 Field	Value
 key	welcome_message
 language	de
+```
 
 ### 4️⃣ Edit the Text
 
 Click inside the text field and modify the value, for example:
 
+```bash
 Willkommen, ich bin Nisha und komme aus Indien und lebe in Stockholm! (manually added)
+```
 
 ### 5️⃣ Lock It as a Manual Translation
 
