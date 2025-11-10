@@ -1,0 +1,14 @@
+{
+  "subtitle": "This is a demo app to add the languages dynamically with auto generated and populated json translations",
+  "button_ok": "OK",
+  "button_cancel": "Cancel",
+  "account_created": "Your account has been created successfully!",
+  "email_sent": "We have sent you an email with a verification link.",
+  "internal_error": "Something went wrong. Please try again later.",
+  "unauthorized": "You are not authorized to perform this action.",
+  "invalid_input": "The provided input is invalid.",
+  "welcome_message": "Welcome, I am Nisha and I am from India and living in Stockholm!",
+  "email_subject_welcome": "Welcome to our platform!",
+  "email_body_welcome": "Thank you for joining us. We’re glad to have you on board!",
+  "password_invalid": "Password must contain at least 8 characters."
+}

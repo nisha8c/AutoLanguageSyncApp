@@ -1,0 +1,14 @@
+{
+  "button_ok": "\"D'accord\"",
+  "button_cancel": "\"Annuler\"",
+  "password_invalid": "Le mot de passe doit contenir au moins 8 caractères.",
+  "email_sent": "Nous vous avons envoyé un e-mail avec un lien de vérification.",
+  "internal_error": "Quelque chose a mal tourné. Veuillez réessayer plus tard.",
+  "unauthorized": "Vous n'êtes pas autorisé à effectuer cette action.",
+  "welcome_message": "Bienvenue, je suis Nisha et je viens d'Inde et je vis à Stockholm !",
+  "subtitle": "Ceci est une application de démonstration pour ajouter les langues dynamiquement avec des traductions json générées et peuplées automatiquement",
+  "invalid_input": "L'entrée fournie est invalide",
+  "account_created": "Votre compte a été créé avec succès",
+  "email_subject_welcome": "Bienvenue sur notre plateforme",
+  "email_body_welcome": "Merci de vous être joint à nous. Nous sommes heureux de vous avoir à bord !"
+}
