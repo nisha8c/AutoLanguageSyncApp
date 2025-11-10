@@ -333,7 +333,7 @@ cd client && npm run dev
 Switch language → text and backend responses update instantly ⚡
 
 
-# Scenarios covered:
+# Scenarios covered: IN CASE OF MEANING DRIFT FOR SPECIFIC TRANSLATION KEY IN SPECIFIC LANGUAGE
 ## Manual JSON Edits Lost After Sync
 ### Problem
 
