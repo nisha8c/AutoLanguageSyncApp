@@ -332,6 +332,124 @@ cd client && npm run dev
 
 Switch language → text and backend responses update instantly ⚡
 
+
+# Scenarios covered:
+## Manual JSON Edits Lost After Sync
+### Problem
+
+When developers or translators edit text directly in locales/{lang}.json (for example locales/de.json)
+and then run:
+
+```bash
+npm run sync
+```
+
+the manual changes disappear — the text resets to its previous version.
+
+### Root Cause
+
+Your multilingual sync pipeline uses the database (DB) as the single source of truth.
+During each sync:
+
+The script rebuilds all JSON language files from the DB.
+
+Any edits made only in the JSON file are not saved back to the DB.
+
+When sync runs again, the JSON is overwritten with the DB’s version.
+
+So the local edit never persists because the DB didn’t know about it.
+
+
+## 🪜 Step-by-Step Fix
+### 1️⃣ Open Prisma Studio
+
+From your project’s server directory, run:
+
+```bash
+npx prisma studio
+```
+
+
+Prisma Studio will open in your browser (usually at 👉 http://localhost:5555
+).
+
+### 2️⃣ Select the “Translation” Table
+
+In the sidebar, click Translation.
+You’ll see a table with the following columns:
+
+```bash
+
+id	key	language	text	manuallyEdited	createdAt	updatedAt
+```
+
+### 3️⃣ Find the Translation You Want to Edit
+
+Use the filter bar at the top of Prisma Studio to locate the exact key you want to update:
+
+Field	Value
+key	welcome_message
+language	de
+
+### 4️⃣ Edit the Text
+
+Click inside the text field and modify the value, for example:
+
+Willkommen, ich bin Nisha und komme aus Indien und lebe in Stockholm! (manually added)
+
+### 5️⃣ Lock It as a Manual Translation
+
+In the manuallyEdited column, set the value to ✅ true.
+
+This tells the sync system:
+“This translation is human-curated — never overwrite it with AI or English updates.”
+
+### 6️⃣ Save the Record
+
+Click 💾 Save Record in the top-right corner of Prisma Studio.
+Your manual edit is now safely stored in the database.
+
+### 7️⃣ Verify Your Changes
+
+Now, re-run the sync:
+
+```bash
+npm run sync
+```
+
+You should see output like this:
+
+✋ [de] Skipped (manually edited) → welcome_message
+✅ Step 1 Done — Created: 0, Updated: 0, Skipped: ...
+
+
+Check your locales/de.json — it will now show your updated text:
+
+"welcome_message": "Willkommen, ich bin Nisha und komme aus Indien und lebe in Stockholm! (manually added)"
+
+
+✅ Your manual edit is preserved and won’t be overwritten by AI or future syncs.
+
+### 8️⃣ (Optional) Re-Enable AI Translation
+
+If you ever want the AI system to re-translate a manually edited key (for example, after updating the English text):
+
+Open Prisma Studio again.
+
+Locate the same record (key = welcome_message, language = de).
+
+Set manuallyEdited → ❌ false.
+
+Run:
+
+
+```bash
+npm run sync
+```
+
+Now the AI will re-translate that key automatically.
+
+
 # ❤️ Author
 
 Built with ❤️ by [Nisha] — powered by TypeScript, Prisma, tRPC, React, and OpenAI.
