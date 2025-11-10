@@ -1,10 +1,10 @@
 # 🌍 AutoLanguageSyncApp  
 > **AI-Powered Cloud Translation Manager** — one English source → instant multilingual support across frontend & backend.
 
-_100% usable in large, multi-page, high-performance apps.
+100% usable in large, multi-page, high-performance apps.
 
 If implemented with the current pattern (AI translation only at sync, and cached translations at runtime),
-this setup scales easily to enterprise-level workloads — both frontend and backend._
+this setup scales easily to enterprise-level workloads — both frontend and backend.
 
 ```bash
 
