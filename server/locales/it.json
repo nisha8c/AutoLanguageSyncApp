@@ -1,14 +1,14 @@
 {
   "button_cancel": "\"Annulla\"",
-  "account_created": "Il tuo account è stato creato con successo",
-  "password_invalid": "La password deve contenere almeno 8 caratteri",
-  "email_sent": "Ti abbiamo inviato un'email con un link di verifica.",
-  "internal_error": "Qualcosa è andato storto. Per favore riprova più tardi.",
-  "unauthorized": "Non sei autorizzato a eseguire questa azione.",
   "welcome_message": "Benvenuto, sono Nisha e vengo dall'India e vivo a Stoccolma!",
   "subtitle": "Questa è un'app demo per aggiungere le lingue dinamicamente con traduzioni json generate e popolate automaticamente",
-  "invalid_input": "L'input fornito non è valido",
-  "email_subject_welcome": "Benvenuto sulla nostra piattaforma! Ti diamo il benvenuto",
-  "email_body_welcome": "Grazie per esserti unito a noi. Siamo felici di averti a bordo!",
-  "button_ok": "Va bene, vai avanti"
+  "bk_password_invalid": "La password deve contenere almeno 8 caratteri.",
+  "bk_email_sent": "Ti abbiamo inviato un'email con un link di verifica",
+  "button_ok": "OK",
+  "bk_account_created": "Il tuo account è stato creato con successo!",
+  "bk_internal_error": "Qualcosa è andato storto. Per favore riprova più tardi.",
+  "bk_unauthorized": "Non sei autorizzato a eseguire questa azione.",
+  "bk_invalid_input": "L'input fornito non è valido",
+  "bk_email_subject_welcome": "Benvenuto sulla nostra piattaforma! Ti diamo il benvenuto",
+  "bk_email_body_welcome": "Grazie per esserti unito a noi. Siamo felici di averti a bordo!"
 }

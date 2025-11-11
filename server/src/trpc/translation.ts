@@ -19,7 +19,7 @@ export const translationRouter = t.router({
         .query(async ({ input }) => {
             // Get the translation from DB
             const record = await prisma.translation.findUnique({
-                where: { key_language: { key: "account_created", language: input.lang } },
+                where: { key_language: { key: "bk_account_created", language: input.lang } },
             });
 
             // fallback to English if missing
