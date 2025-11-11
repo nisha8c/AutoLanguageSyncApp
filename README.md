@@ -126,6 +126,7 @@ cd AutoLanguageSyncApp (or whatever the foldername is)
 ```bash
 cd server
 npm install
+npm install --save-dev tsx
 ```
 
 # Frontend
