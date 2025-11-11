@@ -1,5 +1,11 @@
 # 🌍 AutoLanguageSyncApp  
 > **AI-Powered Cloud Translation Manager** — one English source → instant multilingual support across frontend & backend.
+>
+> 
+> The app syncs English source texts (frontend + backend) with all supported languages through an AI-powered pipeline.
+> Translations are stored in a centralized database and regenerated automatically, keeping JSON files and UI perfectly aligned.
+> Manual edits are protected from AI updates — ensuring accuracy, consistency, and full control across multilingual environments.
+
 
 100% usable in large, multi-page, high-performance apps.
 
