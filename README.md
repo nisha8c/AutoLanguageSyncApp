@@ -71,7 +71,7 @@ The UI text and backend responses always match the same selected language — no
 | Step | Module | Description |
 |------|---------|-------------|
 | 1 | `tRPC /translation.getAll` | Returns all key-value pairs for a given language (frontend fetch). |
-| 2 | `tRPC /translation.buttonClick` | Returns specific translated backend message by key (`account_created`). |
+| 2 | `tRPC /translation.buttonClick` | Returns specific translated backend message by key (`bk_account_created`). |
 | 3 | `Prisma` | Reads the translation from the database using `key_language` unique index. |
 | 4 | **Fallback** | If translation is missing → returns English default text. |
 | 5 | *(Optional)* Redis cache | Speeds up lookups for common requests. |
@@ -256,7 +256,7 @@ Use any translation key dynamically:
 
 ```bash
 const record = await prisma.translation.findUnique({
-  where: { key_language: { key: "account_created", language: "fr" } },
+  where: { key_language: { key: "bk_account_created", language: "fr" } },
 });
 return record?.text ?? "Your account has been created successfully!";
 ```
